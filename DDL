@@ -1,0 +1,24 @@
+--CREAR LA TABLA "LIBROS" CON SUS ATRIBUTOS.
+
+create table libros(
+  id_libro int not null;
+  titulo CHARACTER(20);
+  edicion int;
+  cantidad_paginas int
+);
+
+
+--Agregar una columna
+Alter table libros add column columnaprueba varchar(10);
+
+--Borrar una columna
+Alter table libros drop column columnaprueba;
+
+--Modificar el tipo de dato de una columna.
+Alter table libros modify titulo varchar(80);
+
+--Cambiar el nombre de un campo.
+Alter table libros change cantidad_paginas numero_paginas int;
+
+--Borrar la tabla
+DROP TABLE libros;
